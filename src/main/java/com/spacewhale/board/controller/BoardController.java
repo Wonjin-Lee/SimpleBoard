@@ -24,4 +24,15 @@ public class BoardController {
 
         return mv;
     }
+
+    @RequestMapping("/board/openBoardWrite.do")
+    public String openBoardWrite() throws Exception {
+        return "/board/boardWrite";
+    }
+
+    @RequestMapping("/board/insertBoard.do")
+    public String insertBoard(BoardDto boardDto) throws Exception {
+        boardService.insertBoard(boardDto);
+        return "redirect:/board/openBoardList.do";
+    }
 }
