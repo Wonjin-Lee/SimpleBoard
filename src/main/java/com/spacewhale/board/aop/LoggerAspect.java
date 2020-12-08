@@ -13,8 +13,8 @@ public class LoggerAspect {
     private Logger log = LoggerFactory.getLogger(this.getClass());
 
     @Around("execution(* com.spacewhale.board..controller.*Controller.*(..)) " +
-            "or execution(* com.spacewhale.board..service.*Impl.*(..)) " +
-            "or execution(* com.spacewhale.board..dao.*Mapper.*(..))")
+            "|| execution(* com.spacewhale.board..service.*Impl.*(..)) " +
+            "|| execution(* com.spacewhale.board..dao.*Mapper.*(..))")
     public Object logPrint(ProceedingJoinPoint joinPoint) throws Throwable {
         String type = "";
         String name = joinPoint.getSignature().getDeclaringTypeName();
