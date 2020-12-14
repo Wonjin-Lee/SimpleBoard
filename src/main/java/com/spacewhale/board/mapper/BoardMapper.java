@@ -1,6 +1,7 @@
 package com.spacewhale.board.mapper;
 
 import com.spacewhale.board.dto.BoardDto;
+import com.spacewhale.board.dto.BoardFileDto;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -13,4 +14,5 @@ public interface BoardMapper {
     BoardDto selectBoardDetail(int boardIdx) throws Exception;
     void updateBoard(BoardDto boardDto) throws Exception;
     void deleteBoard(int boardIdx) throws Exception;
+    void insertBoardFileList(List<BoardFileDto> list) throws Exception;
 }
