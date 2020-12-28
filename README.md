@@ -7,3 +7,4 @@
 - AOP
 - Transaction
 - Apache Common Fileupload - CommonsMultipartResolver
+- RESTful API
