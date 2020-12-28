@@ -5,6 +5,7 @@ import com.spacewhale.board.dto.BoardFileDto;
 import com.spacewhale.board.service.BoardService;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,6 +30,7 @@ import java.util.List;
  * 첨부파일 다운로드      /board/file     GET
  */
 
+@Controller
 public class RestBoardController {
 
     @Autowired
